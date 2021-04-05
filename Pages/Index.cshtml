@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<h2>Observation</h2>
+<hr />
+<div class="row">
+    @if (Model.Observation.observation != null)
+    {
+        @foreach (var Observation in Model.Observation.observation)
+        {
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>@Observation.name</label>
+                        <select class="form-control">
+                            <option selected disabled>--Select and option--</option>
+                            @foreach (var opinion in Observation.opinion)
+                            {
+                                <option>@opinion.name</option>
+                            }
+                        </select>
+                </div>
+            </div>
+        }
+    }
+</div>
+<bu
