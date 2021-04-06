@@ -11,7 +11,7 @@
 <h2>Observation</h2>
 <hr />
 <div class="row">
-    @if (Model.Observation.observation != null)
+    @if (Model.Observation != null && Model.Observation.observation != null)
     {
         @foreach (var Observation in Model.Observation.observation)
         {

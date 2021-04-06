@@ -40,6 +40,7 @@ namespace ShebawsCore
 
             app.UseStaticFiles();
             app.UseSerilogRequestLogging();
+           
 
             app.UseRouting();
 
